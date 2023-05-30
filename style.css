@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Urbanist', sans-serif;
+}
+.hero {
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+    "nav"
+    "content";
+    min-height: 100vh;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.nav {
+    grid-area: nav;
+    display: grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+    gap: 1em;
+    align-items: center;
+    height: 90px;
+}
+.nav-menu{
+    display: none;
+}
+.nav-link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav-list{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+}
+.nav-logo{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.nav-icon{
+    width: 30px;
+}
+
+/* Pasamso al hero main */
+
+.hero-container{
+    grid-area: content;
+    display: grid;
+    gap: 2em;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    padding-bottom: 180px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-title{
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.hero-cta{
+    text-decoration: none;
+    color: white;
+    padding: 15px 60px;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color .3s;
+}
+
+.hero-cta:hover{
+    background-color: white;
+    color: #2a5298;
+}
+
+.hero-waves{
+    grid-area: content;
+    align-self: end;
+}
+.hero-img{
+    width: 100%;
+}
+
+@media (max-width:800px){
+
+    .nav-list{
+        display: none;
+    }
+
+    .nav-menu{
+        display: block;
+    }
+
+    .hero-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        text-align: center;
+    }
+
+    .hero-picture{
+        grid-row: 1/2;
+    }
+    
+    .hero-img{
+        max-width: 500px;
+        display: block;
+        margin: 0 auto;
+    }
+}
