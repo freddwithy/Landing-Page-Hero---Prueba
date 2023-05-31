@@ -94,6 +94,20 @@ body{
     color: #2a5298;
 }
 
+.nav-link-button{
+    text-decoration: none;
+    color: white;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 5px 15px;
+    transition: background-color .3s;
+}
+
+.nav-link-button:hover{
+    background-color: white;
+    color: #1e3c72;
+}
+
 .hero-waves{
     grid-area: content;
     align-self: end;
